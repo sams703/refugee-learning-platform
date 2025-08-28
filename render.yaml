@@ -3,7 +3,7 @@ services:
   - type: web
     name: refugee-learning-backend
     runtime: node
-    plan: free
+    plan: starter
     buildCommand: cd backend && npm ci
     startCommand: cd backend && npm start
     envVars:
@@ -20,12 +20,10 @@ services:
     autoDeploy: false
 
   # Dashboard Frontend Service  
-  - type: web
+  - type: static
     name: refugee-learning-dashboard
-    runtime: static
-    plan: free
     buildCommand: cd dashboard && npm ci && npm run build
-    staticPublishPath: dashboard/build
+    publishPath: dashboard/build
     envVars:
       - key: REACT_APP_API_URL
         value: https://refugee-learning-backend.onrender.com/api
