@@ -1,0 +1,20 @@
+# Render Web Service Configuration for Backend
+# Use this when creating a new Web Service on Render
+
+# Build & Start Settings:
+buildCommand: npm ci
+startCommand: npm start
+runtime: node
+
+# Environment Variables:
+# Add these in Render Dashboard -> Environment tab:
+# NODE_ENV = production
+# DB_TYPE = pg
+# DATABASE_URL = your_external_database_url_here
+# JWT_SECRET = (auto-generated)
+
+# Advanced Settings:
+# - Auto-Deploy: Yes (connects to your GitHub repo)  
+# - Branch: main
+# - Root Directory: backend
+# - Plan: Starter (Free)

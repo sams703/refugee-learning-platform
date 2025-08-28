@@ -1,0 +1,15 @@
+# Render Static Site Configuration for Dashboard
+# Use this when creating a new Static Site on Render
+
+# Build Settings:
+buildCommand: npm ci && npm run build
+publishDirectory: build
+
+# Environment Variables:
+# Add these in Render Dashboard -> Environment tab:
+# REACT_APP_API_URL = https://your-backend-service.onrender.com/api
+
+# Advanced Settings:
+# - Auto-Deploy: Yes (connects to your GitHub repo)
+# - Branch: main
+# - Root Directory: dashboard
