@@ -18,7 +18,7 @@ const config = {
   
   production: {
     client: process.env.DB_TYPE || 'pg',
-    connection: {
+    connection: process.env.DATABASE_URL || {
       host: process.env.DB_HOST || 'localhost',
       port: process.env.DB_PORT || 5432,
       user: process.env.DB_USER,
