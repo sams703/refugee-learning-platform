@@ -2,8 +2,7 @@ services:
   # Backend API Service
   - type: web
     name: refugee-learning-backend
-    env: node
-    plan: free
+    runtime: node
     buildCommand: cd backend && npm ci
     startCommand: cd backend && npm start
     envVars:
@@ -38,8 +37,7 @@ services:
   # Dashboard Frontend Service  
   - type: web
     name: refugee-learning-dashboard
-    env: static
-    plan: free
+    runtime: static
     buildCommand: cd dashboard && npm ci && npm run build
     staticPublishPath: dashboard/build
     envVars:
@@ -51,4 +49,3 @@ services:
 databases:
   - name: refugee-learning-db
     databaseName: refugee_learning_platform
-    plan: free
