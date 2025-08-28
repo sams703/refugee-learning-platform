@@ -3,7 +3,7 @@ services:
   - type: web
     name: refugee-learning-backend
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: cd backend && npm ci
     startCommand: cd backend && npm start
     envVars:
@@ -11,26 +11,10 @@ services:
         value: production
       - key: DB_TYPE
         value: pg
-      - key: DB_HOST
-        fromDatabase:
-          name: refugee-learning-db
-          property: host
-      - key: DB_PORT
-        fromDatabase:
-          name: refugee-learning-db
-          property: port
-      - key: DB_NAME
-        fromDatabase:
-          name: refugee-learning-db
-          property: database
-      - key: DB_USER
-        fromDatabase:
-          name: refugee-learning-db
-          property: user
-      - key: DB_PASSWORD
-        fromDatabase:
-          name: refugee-learning-db
-          property: password
+      # Use external free database service
+      # Set these in Render dashboard or use a free service like Supabase
+      - key: DATABASE_URL
+        value: # Set this to your external database URL (e.g., Supabase, Railway, etc.)
       - key: JWT_SECRET
         generateValue: true
     autoDeploy: false
@@ -39,7 +23,7 @@ services:
   - type: web
     name: refugee-learning-dashboard
     runtime: static
-    plan: starter
+    plan: free
     buildCommand: cd dashboard && npm ci && npm run build
     staticPublishPath: dashboard/build
     envVars:
@@ -47,8 +31,13 @@ services:
         value: https://refugee-learning-backend.onrender.com/api
     autoDeploy: false
 
-# Database
-databases:
-  - name: refugee-learning-db
-    databaseName: refugee_learning_platform
-    plan: starter
+# Database - Using external free database service
+# For completely free setup, consider using:
+# - Railway PostgreSQL (free tier)
+# - Supabase (free tier)
+# - PlanetScale (free tier)
+# - or SQLite for development
+# databases:
+#   - name: refugee-learning-db
+#     databaseName: refugee_learning_platform
+#     plan: free  # Note: Render's free database has limitations
