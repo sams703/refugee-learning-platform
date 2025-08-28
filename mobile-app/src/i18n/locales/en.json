@@ -1,0 +1,135 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "email": "Email",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "loginSuccess": "Login successful",
+    "loginError": "Login failed. Please check your credentials.",
+    "registerSuccess": "Registration successful",
+    "registerError": "Registration failed. Please try again.",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "navigation": {
+    "home": "Home",
+    "courses": "Courses",
+    "progress": "Progress",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "welcomeMessage": "Continue your learning journey",
+    "recentCourses": "Recent Courses",
+    "achievements": "Recent Achievements",
+    "todaysGoal": "Today's Goal",
+    "offlineMode": "Offline Mode",
+    "syncData": "Sync Data"
+  },
+  "courses": {
+    "allCourses": "All Courses",
+    "myCourses": "My Courses",
+    "categories": {
+      "basicEducation": "Basic Education",
+      "digitalSkills": "Digital Skills",
+      "entrepreneurship": "Entrepreneurship"
+    },
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "startCourse": "Start Course",
+    "continueCourse": "Continue",
+    "courseCompleted": "Completed",
+    "lessons": "lessons",
+    "duration": "Duration",
+    "downloadForOffline": "Download for Offline"
+  },
+  "lessons": {
+    "lesson": "Lesson",
+    "lessonComplete": "Lesson Complete",
+    "nextLesson": "Next Lesson",
+    "previousLesson": "Previous Lesson",
+    "quiz": "Quiz",
+    "takeQuiz": "Take Quiz",
+    "retakeQuiz": "Retake Quiz",
+    "quizResults": "Quiz Results",
+    "score": "Score",
+    "passed": "Passed",
+    "failed": "Failed",
+    "correctAnswers": "Correct Answers",
+    "timeSpent": "Time Spent"
+  },
+  "progress": {
+    "overallProgress": "Overall Progress",
+    "courseProgress": "Course Progress",
+    "badges": "Badges",
+    "achievements": "Achievements",
+    "completedCourses": "Completed Courses",
+    "totalTimeSpent": "Total Time Spent",
+    "streak": "Learning Streak",
+    "points": "Points"
+  },
+  "profile": {
+    "personalInfo": "Personal Information",
+    "location": "Location",
+    "campName": "Camp Name",
+    "language": "Language",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "phoneNumber": "Phone Number",
+    "updateProfile": "Update Profile",
+    "changePassword": "Change Password"
+  },
+  "settings": {
+    "notifications": "Notifications",
+    "downloadSettings": "Download Settings",
+    "accessibility": "Accessibility",
+    "about": "About",
+    "version": "Version",
+    "supportedLanguages": "Supported Languages",
+    "autoDownload": "Auto Download",
+    "wifiOnly": "WiFi Only",
+    "fontSize": "Font Size",
+    "highContrast": "High Contrast"
+  },
+  "offline": {
+    "noConnection": "No Internet Connection",
+    "workingOffline": "Working Offline",
+    "syncWhenOnline": "Data will sync when connection is restored",
+    "downloadContent": "Download content for offline access",
+    "storageUsed": "Storage Used"
+  },
+  "errors": {
+    "genericError": "Something went wrong. Please try again.",
+    "networkError": "Network error. Please check your connection.",
+    "serverError": "Server error. Please try again later.",
+    "validationError": "Please fill in all required fields.",
+    "authError": "Authentication failed. Please login again."
+  }
+}

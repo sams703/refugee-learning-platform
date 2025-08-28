@@ -1,0 +1,135 @@
+{
+  "common": {
+    "loading": "Inapakia...",
+    "error": "Hitilafu",
+    "success": "Mafanikio",
+    "retry": "Jaribu Tena",
+    "cancel": "Ghairi",
+    "confirm": "Thibitisha",
+    "continue": "Endelea",
+    "back": "Rudi",
+    "next": "Ifuatayo",
+    "finish": "Maliza",
+    "save": "Hifadhi",
+    "edit": "Hariri",
+    "delete": "Futa",
+    "search": "Tafuta",
+    "filter": "Chuja",
+    "sort": "Panga"
+  },
+  "auth": {
+    "login": "Ingia",
+    "register": "Jisajili",
+    "username": "Jina la Mtumiaji",
+    "password": "Nenosiri",
+    "email": "Barua Pepe",
+    "firstName": "Jina la Kwanza",
+    "lastName": "Jina la Mwisho",
+    "confirmPassword": "Thibitisha Nenosiri",
+    "forgotPassword": "Umesahau Nenosiri?",
+    "loginSuccess": "Umeingia kwa mafanikio",
+    "loginError": "Kuingia hakukufaulu. Tafadhali kagua taarifa zako.",
+    "registerSuccess": "Usajili umefaulu",
+    "registerError": "Usajili hakukufaulu. Tafadhali jaribu tena.",
+    "logout": "Toka",
+    "profile": "Wasifu"
+  },
+  "navigation": {
+    "home": "Nyumbani",
+    "courses": "Kozi",
+    "progress": "Maendeleo",
+    "profile": "Wasifu",
+    "settings": "Mipangilio"
+  },
+  "home": {
+    "welcome": "Karibu",
+    "welcomeMessage": "Endelea na safari yako ya kujifunza",
+    "recentCourses": "Kozi za Hivi Karibuni",
+    "achievements": "Mafanikio ya Hivi Karibuni",
+    "todaysGoal": "Lengo la Leo",
+    "offlineMode": "Hali ya Nje ya Mtandao",
+    "syncData": "Sawazisha Data"
+  },
+  "courses": {
+    "allCourses": "Kozi Zote",
+    "myCourses": "Kozi Zangu",
+    "categories": {
+      "basicEducation": "Elimu ya Msingi",
+      "digitalSkills": "Ujuzi wa Kidijitali",
+      "entrepreneurship": "Ujasiriamali"
+    },
+    "difficulty": {
+      "beginner": "Mwanzo",
+      "intermediate": "Wastani",
+      "advanced": "Juu"
+    },
+    "startCourse": "Anza Kozi",
+    "continueCourse": "Endelea",
+    "courseCompleted": "Imemalizika",
+    "lessons": "masomo",
+    "duration": "Muda",
+    "downloadForOffline": "Pakua kwa Matumizi Nje ya Mtandao"
+  },
+  "lessons": {
+    "lesson": "Somo",
+    "lessonComplete": "Somo Limemalizika",
+    "nextLesson": "Somo Linalofuata",
+    "previousLesson": "Somo la Awali",
+    "quiz": "Jaribio",
+    "takeQuiz": "Fanya Jaribio",
+    "retakeQuiz": "Fanya Jaribio Tena",
+    "quizResults": "Matokeo ya Jaribio",
+    "score": "Alama",
+    "passed": "Umepita",
+    "failed": "Umeshindwa",
+    "correctAnswers": "Majibu Sahihi",
+    "timeSpent": "Muda Uliotumika"
+  },
+  "progress": {
+    "overallProgress": "Maendeleo ya Jumla",
+    "courseProgress": "Maendeleo ya Kozi",
+    "badges": "Vyeti",
+    "achievements": "Mafanikio",
+    "completedCourses": "Kozi Zilizomalizika",
+    "totalTimeSpent": "Muda wa Jumla Uliotumika",
+    "streak": "Mfuatano wa Kujifunza",
+    "points": "Pointi"
+  },
+  "profile": {
+    "personalInfo": "Taarifa Binafsi",
+    "location": "Mahali",
+    "campName": "Jina la Kambi",
+    "language": "Lugha",
+    "dateOfBirth": "Tarehe ya Kuzaliwa",
+    "gender": "Jinsia",
+    "phoneNumber": "Nambari ya Simu",
+    "updateProfile": "Sasisha Wasifu",
+    "changePassword": "Badilisha Nenosiri"
+  },
+  "settings": {
+    "notifications": "Arifa",
+    "downloadSettings": "Mipangilio ya Kupakua",
+    "accessibility": "Upatikanaji",
+    "about": "Kuhusu",
+    "version": "Toleo",
+    "supportedLanguages": "Lugha Zinazotumika",
+    "autoDownload": "Pakua Kiotomatiki",
+    "wifiOnly": "WiFi Pekee",
+    "fontSize": "Ukubwa wa Herufi",
+    "highContrast": "Utofauti Mkuu"
+  },
+  "offline": {
+    "noConnection": "Hakuna Muunganisho wa Intaneti",
+    "workingOffline": "Inafanya Kazi Nje ya Mtandao",
+    "syncWhenOnline": "Data itasawazishwa muunganisho utakaporejesha",
+    "downloadContent": "Pakua maudhui kwa matumizi nje ya mtandao",
+    "storageUsed": "Nafasi Iliyotumika"
+  },
+  "errors": {
+    "genericError": "Kuna kitu kimekwenda vibaya. Tafadhali jaribu tena.",
+    "networkError": "Hitilafu ya mtandao. Tafadhali kagua muunganisho wako.",
+    "serverError": "Hitilafu ya seva. Tafadhali jaribu tena baadaye.",
+    "validationError": "Tafadhali jaza sehemu zote zinazohitajika.",
+    "authError": "Uthibitisho umeshindwa. Tafadhali ingia tena."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "refugee-learning-platform",
+  "description": "Digital Learning Platform for Refugee and Rural Communities",
+  "keywords": ["education", "offline-first", "refugee", "rural", "learning-platform", "sdg"],
+  "website": "https://github.com/yourusername/refugee-learning-platform",
+  "repository": "https://github.com/yourusername/refugee-learning-platform",
+  "logo": "",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "cd backend && npm run migrate"
+  },
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production",
+      "required": true
+    },
+    "JWT_SECRET": {
+      "description": "Secret key for JWT token generation",
+      "generator": "secret",
+      "required": true
+    },
+    "DB_TYPE": {
+      "description": "Database type",
+      "value": "pg",
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-postgresql:mini",
+    "heroku-redis:mini"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

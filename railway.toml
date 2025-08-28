@@ -1,0 +1,29 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "cd backend && npm start"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[[services]]
+name = "backend"
+source = "backend"
+
+[services.variables]
+NODE_ENV = "production"
+PORT = "${{RAILWAY_PORT}}"
+DB_TYPE = "pg"
+DB_HOST = "${{PGHOST}}"
+DB_PORT = "${{PGPORT}}"
+DB_NAME = "${{PGDATABASE}}"
+DB_USER = "${{PGUSER}}"
+DB_PASSWORD = "${{PGPASSWORD}}"
+JWT_SECRET = "${{JWT_SECRET}}"
+
+[[services]]
+name = "dashboard"
+source = "dashboard"
+
+[services.variables]
+REACT_APP_API_URL = "${{BACKEND_URL}}/api"

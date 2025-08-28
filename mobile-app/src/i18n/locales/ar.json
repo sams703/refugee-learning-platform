@@ -1,0 +1,37 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "retry": "إعادة المحاولة",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "continue": "متابعة",
+    "back": "رجوع",
+    "next": "التالي",
+    "finish": "إنهاء",
+    "save": "حفظ",
+    "edit": "تحرير",
+    "delete": "حذف",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "التسجيل",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "email": "البريد الإلكتروني",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "loginSuccess": "تم تسجيل الدخول بنجاح",
+    "loginError": "فشل في تسجيل الدخول. يرجى التحقق من بياناتك.",
+    "registerSuccess": "تم التسجيل بنجاح",
+    "registerError": "فشل التسجيل. يرجى المحاولة مرة أخرى.",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي"
+  }
+}

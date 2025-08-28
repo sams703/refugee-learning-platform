@@ -1,0 +1,90 @@
+version: '3.8'
+
+services:
+  # Backend API Service
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - DB_TYPE=pg
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=refugee_learning_platform
+      - DB_USER=postgres
+      - DB_PASSWORD=secure_password_change_in_production
+      - JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+    volumes:
+      - backend_uploads:/app/uploads
+      - backend_data:/app/data
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    networks:
+      - learning-platform
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=refugee_learning_platform
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=secure_password_change_in_production
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - learning-platform
+
+  # Teacher Dashboard (React App)
+  dashboard:
+    build: ./dashboard
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_URL=http://backend:3001/api
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - learning-platform
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deployment/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./deployment/ssl:/etc/ssl/certs
+    depends_on:
+      - backend
+      - dashboard
+    restart: unless-stopped
+    networks:
+      - learning-platform
+
+  # Redis for caching and session storage (optional)
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - learning-platform
+
+volumes:
+  postgres_data:
+  backend_uploads:
+  backend_data:
+  redis_data:
+
+networks:
+  learning-platform:
+    driver: bridge

@@ -1,0 +1,54 @@
+services:
+  # Backend API Service
+  - type: web
+    name: refugee-learning-backend
+    env: node
+    plan: free
+    buildCommand: cd backend && npm ci
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_TYPE
+        value: pg
+      - key: DB_HOST
+        fromDatabase:
+          name: refugee-learning-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: refugee-learning-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: refugee-learning-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: refugee-learning-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: refugee-learning-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+    autoDeploy: false
+
+  # Dashboard Frontend Service  
+  - type: web
+    name: refugee-learning-dashboard
+    env: static
+    plan: free
+    buildCommand: cd dashboard && npm ci && npm run build
+    staticPublishPath: dashboard/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://refugee-learning-backend.onrender.com/api
+    autoDeploy: false
+
+# Database
+databases:
+  - name: refugee-learning-db
+    databaseName: refugee_learning_platform
+    plan: free

@@ -1,0 +1,37 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "continue": "Continuer",
+    "back": "Retour",
+    "next": "Suivant",
+    "finish": "Terminer",
+    "save": "Enregistrer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier"
+  },
+  "auth": {
+    "login": "Se connecter",
+    "register": "S'inscrire",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "email": "E-mail",
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "confirmPassword": "Confirmer le mot de passe",
+    "forgotPassword": "Mot de passe oublié?",
+    "loginSuccess": "Connexion réussie",
+    "loginError": "Échec de la connexion. Veuillez vérifier vos informations.",
+    "registerSuccess": "Inscription réussie",
+    "registerError": "Échec de l'inscription. Veuillez réessayer.",
+    "logout": "Se déconnecter",
+    "profile": "Profil"
+  }
+}
