@@ -20,10 +20,11 @@ services:
     autoDeploy: false
 
   # Dashboard Frontend Service  
-  - type: static
+  - type: web
     name: refugee-learning-dashboard
+    runtime: static
     buildCommand: cd dashboard && npm ci && npm run build
-    publishPath: dashboard/build
+    staticPublishPath: dashboard/build
     envVars:
       - key: REACT_APP_API_URL
         value: https://refugee-learning-backend.onrender.com/api
