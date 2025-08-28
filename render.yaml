@@ -3,6 +3,7 @@ services:
   - type: web
     name: refugee-learning-backend
     runtime: node
+    plan: starter
     buildCommand: cd backend && npm ci
     startCommand: cd backend && npm start
     envVars:
@@ -38,6 +39,7 @@ services:
   - type: web
     name: refugee-learning-dashboard
     runtime: static
+    plan: starter
     buildCommand: cd dashboard && npm ci && npm run build
     staticPublishPath: dashboard/build
     envVars:
@@ -49,3 +51,4 @@ services:
 databases:
   - name: refugee-learning-db
     databaseName: refugee_learning_platform
+    plan: starter
